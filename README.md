@@ -22,18 +22,18 @@ Here are some previews of the website:
 ### Desktop View
 
 <p align="center">
-  <img src="Screens/home.png" alt="Home Page" width="30%">
-  <img src="Screens/explore-me.png" alt="Explore Me Page" width="30%">
+  <img src="Screens/home.png" alt="Home Page" width="50%">
+  <img src="Screens/explore-me.png" alt="Explore Me Page" width="50%">
 </p>
 
 <p align="center">
-  <img src="Screens/my-projects.png" alt="My Projects Page" width="30%">
-  <img src="Screens/project-example.png" alt="Project Example Page" width="30%">
+  <img src="Screens/my-projects.png" alt="My Projects Page" width="50%">
+  <img src="Screens/project-example.png" alt="Project Example Page" width="50%">
 </p>
 
 <p align="center">
-  <img src="Screens/about.png" alt="About Page" width="30%">
-  <img src="Screens/contact.png" alt="Contact Page" width="30%">
+  <img src="Screens/about.png" alt="About Page" width="50%">
+  <img src="Screens/contact.png" alt="Contact Page" width="50%">
 </p>
 
 ## Special Thanks
