@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <style>
+      @font-face {
+        font-family: "mightyspidey";
+        src: url("../assets/fonts/mightyspidey.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+button{
+outline:none;
+}
+       .loading {
+          background-size: 100px;
+        }
+      body {
+        background: url("../assets/images/contact-bg.jpg") no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        /* align-items: center; */
+        text-align: center;
+      }
+      .social_medias {
+        display: flex;
+        justify-content: space-around;
+        /* display: flex; */
+        /* justify-content: space-between; */
+      }
+      h1 {
+        font-family: "mightyspidey";
+        font-size: 4vw;
+        line-height: 55px;
+        text-shadow: -4px 2px rgba(0, 0, 0, 0.329);
+        letter-spacing: 10px;
+      }
+      .social_medias div {
+        background-color: white;
+        width: 290px;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s all;
+      }
+      .social_medias div:hover {
+        width: 310px;
+        height: 210px;
+      }
+
+      .insta img {
+        width: 55%;
+      }
+      .facebook img {
+        width: 50%;
+      }
+      .gmail img {
+        width: 90%;
+      }
+      @media only screen and (max-width: 1200px) {
+        body {
+          background-size: cover;
+        }
+      }
+      @media only screen and (max-width: 920px) {
+        .social_medias {
+          align-items: center;
+
+          flex-direction: column;
+        }
+        .social_medias div {
+          margin-bottom: 20px;
+          width: 250px;
+          height: 160px;
+          border-radius: 50px;
+        }
+      }
+      @media only screen and (max-width: 760px) {
+      .loading {
+          background-size: 65px!important;
+        }
+        body {
+          background-size: cover;
+        }
+        h1 {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          font-size: 20px;
+          letter-spacing: 7px;
+          line-height: 25px;
+        }
+        .social_medias div {
+          margin-bottom: 20px;
+          width: 200px;
+          height: 120px;
+          border-radius: 50px;
+        }
+        .social_medias div:hover {
+          width: 210px;
+          height: 140px;
+        }
+      }
+      @media only screen and (max-width: 300px) {
+        body {
+          background-size: 500%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+ <script>
+        window.onload = function() {
+  document.getElementsByClassName("gradient")[0].style.opacity = "0";
+document.getElementsByClassName("loading")[0].style.opacity = "0";
+
+setTimeout(function(){
+document.getElementsByClassName("gradient")[0].style.display = "none";
+document.getElementsByClassName("loading")[0].style.display = "none";
+},500)
+};
+    </script>
+ <div class="gradient" style="background-image: radial-gradient(#d10000, #680000);
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden; transition:0.5s all"></div>
+
+    <div class="loading" style='display: block;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background: url("../assets/images/loader.webp") 50% 50% no-repeat;
+        transition:0.5s all'></div>
+    <section class="main">
+      <div class="container">
+        <h1>
+          CONTACT <br />
+          ME
+        </h1>
+        <div class="social_medias">
+          <a href="http://t.ly/Arj1" target="_blank" >
+            <div class="insta">
+              <img src="../assets/images/insta_icon.png" alt="" />
+            </div>
+          </a>
+          <a
+            href="http://t.ly/JHi5"
+            target="_blank"
+          >
+            <div class="facebook">
+              <img src="../assets/images/facebook_icon.png" alt="" />
+            </div>
+          </a>
+          <a href="mailto:abluseeb@gmail.com" target="_blank">
+            <div class="gmail">
+              <img src="../assets/images/gmail_icon.png" alt="" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

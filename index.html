@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+
+ 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      @font-face {
+        font-family: "Far From Homecoming";
+        src: url("./assets/fonts/FarFromHomecomingRegular.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Amazing Spider Man slant";
+        src: url("./assets/fonts/AmazingSpiderManslant.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "mightyspidey";
+        src: url("./assets/fonts/mightyspidey.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+     
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+      .gradient {
+        background-image: radial-gradient(#d10000, #680000);
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      .loading {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background: url("assets/images/loader.webp") 50% 50% no-repeat;
+        background-size: 100px;
+      }
+      /* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+.visible{
+      display:block;
+      }
+      .invisible{
+      display:none;
+      }
+      body {
+        margin: 0;
+      }
+      .home_sec {
+        background-color: rgb(192, 4, 4);
+        background: url("./assets/images/home.webp") no-repeat;
+
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        background-position:center;
+      }
+      .container {
+        padding-top: 45vh;
+      }
+      .container {
+        justify-content: space-between;
+        display: flex;
+      }
+      .btn_container {
+        /* border: 1px solid black; */
+        font-size: 40px;
+        color: white;
+        font-family: "Fasthand", cursive;
+
+        /* justify-content: space-between; */
+        padding-right: 50px;
+        padding-top: 30px;
+        margin-top: 0;
+        align-items: center;
+        width: 390px;
+        transition: 0.2s all;
+      }
+      .btn_container:hover {
+        width: 410px;
+      }
+      button {
+      outline:none;
+        margin-top: 0;
+        padding-bottom: 20px;
+        font-family: "Far From Homecoming";
+        background: url("./assets/images/home_btn.webp") no-repeat -30px center;
+        background-size: 115%;
+
+        border-radius: 70px;
+        border-width: 1px;
+        border-color: #666666;
+        border-style: solid;
+        width: 100%;
+        height: 115px;
+        text-align: left;
+        color: white;
+        font-size: 43px;
+        /* border-width: 10px; */
+        cursor: pointer;
+      }
+      .txt_container {
+        color: white;
+
+        line-height: 0px;
+        display: flex;
+        flex-direction: column;
+      }
+      .txt_container p {
+        margin-bottom: 10px;
+      }
+      .txt_container p#p1 {
+        font-size: 70px;
+        /* margin-bottom: 10px; */
+        margin-left: 20px;
+        font-family: "Far From Homecoming";
+        margin-bottom: 35px;
+      }
+      .txt_container p#p2 {
+        font-size: 45px;
+        /* margin-bottom: 10px; */
+        line-height: 40px;
+        margin-left: 70px;
+        letter-spacing: 5px;
+        font-family: "Amazing Spider Man slant";
+      }
+      #p3 {
+        margin-top: 30px;
+        font-size: 4vw;
+        color: white;
+        font-family: "mightyspidey";
+        /* margin-bottom: 10px; */
+        /* margin-left: 20px;
+        font-family: "Far From Homecoming";
+        margin-bottom: 35px; */
+        background: -webkit-linear-gradient(#6f6d6d, #eee);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .name {
+        text-align: center;
+        /* padding-top: 10px; */
+      }
+      @media only screen and (max-width: 960px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+          padding-top: 100px;
+        }
+        .txt_container p#p2 {
+          margin-left: 0;
+          margin-top: 60px;
+        }
+        
+        button {
+          height: 90px;
+          padding-left: 15px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+      .visible{
+      display:none;
+      }
+      .container {
+      padding-top:10vh;
+      }
+      .invisible{
+      display:block;
+      }
+        .loading {
+          background-size: 65px;
+        }
+        .txt_container {
+          text-align: center;
+        }
+        .txt_container p#p1 {
+          font-size: 40px;
+          margin-top: 60px;
+        }
+        .txt_container p#p2 {
+          font-size: 40px;
+          margin-top: 40px;
+        }
+        #p3 {
+          font-size: 30px;
+        }
+        .btn_container {
+          width: 80%;
+          padding-right: 0;
+        }
+        .btn_container:hover {
+          width: 85%;
+        }
+        button {
+          width: 100%;
+          font-size: 30px;
+          height: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <script>
+        window.onload = function() {
+  document.getElementsByClassName("gradient")[0].style.opacity = "0";
+document.getElementsByClassName("loading")[0].style.opacity = "0";
+
+setTimeout(function(){
+document.getElementsByClassName("gradient")[0].style.display = "none";
+document.getElementsByClassName("loading")[0].style.display = "none";
+},500)
+};
+    </script>
+    <div class="gradient" style="transition:0.5s all;"></div>
+
+    <div class="loading" style="transition:0.5s all;"></div>
+        
+    <section class="home_sec">
+      <div class="container">
+        <div class="txt_container">
+          <p id="p1">HELLO</p>
+          <p id="p2">MY NAME IS</p>
+        </div>
+        <div class="name"><p id="p3" class="invisible">ABDUL</p><p id="p3" class="invisible">HASEEB</p></div>
+        <div class="btn_container">
+          <a href="/explore-me/"><button>Explore Me</button></a>
+        </div>
+      </div>
+      <div class="name"><p id="p3" class="visible">ABDUL-HASEEB</p></div>
+      
+      
+    </section>
+  </body>
+</html>

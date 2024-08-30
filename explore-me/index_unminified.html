@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Me</title>
+    <style>
+      @font-face {
+        font-family: "Far From Homecoming";
+        src: url("../assets/fonts/FarFromHomecomingRegular.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+      .loading {
+          background-size: 100px;
+        }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Far From Homecoming";
+      }
+      .explore-section {
+        background-color: #16171c;
+
+        height: 100vh;
+      }
+      .bg_image {
+        background: url("../assets/images/eplore-me-Bg.jpg") no-repeat center
+          center;
+        background-size: contain;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        padding-top: 20vh;
+        display: flex;
+        justify-content: space-between;
+        width: 97%;
+      }
+      .two_btns {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+      outline:none;
+        width: 390px;
+        height: 100px;
+        border-radius: 70px;
+        background-color: black;
+        color: white;
+        border: none;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 40px;
+        transition: 0.2s all;
+        cursor: pointer;
+      }
+      button:hover {
+        width: 400px;
+        color: rgb(231, 0, 0);
+      }
+      #btn1 {
+        margin-bottom: 80px;
+        background: url("../assets/images/explore-btn1.jpg") no-repeat;
+        background-position: 60px -60px;
+        background-size: 120%;
+        background-color: black;
+      }
+      #btn2 {
+        background: url("../assets/images/explore-btn3.jpg") no-repeat;
+        background-position: 104px -26px;
+        background-size: 120%;
+        background-color: black;
+      }
+      #btn3 {
+        margin-top: 50px;
+        background: url("../assets/images/explore-btn2.jpg") no-repeat;
+        background-position: 229px -83px;
+        background-size: 50%;
+        background-color: black;
+      }
+      @media only screen and (max-width: 990px) {
+        .bg_image {
+          background-size: 50%;
+        }
+
+        button {
+          width: 250px;
+          height: 60px;
+          font-size: 25px;
+        }
+        button:hover {
+          width: 260px;
+          color: rgb(231, 0, 0);
+        }
+        #btn1 {
+          background-position: 43px -46px;
+        }
+        #btn2 {
+          background-position: 76px -26px;
+        }
+        #btn3 {
+          background-position: 144px -56px;
+        }
+      }
+      @media only screen and (max-width: 760px) {
+      .loading {
+          background-size: 65px!important;
+        }
+        .bg_image {
+          background-size: 90%;
+        }
+        .container {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        #btn1 {
+          margin-bottom: 50px;
+        }
+        button {
+          font-size: 20px;
+        }
+        button:hover {
+          width: 260px;
+          color: rgb(231, 0, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <script>
+        window.onload = function() {
+  document.getElementsByClassName("gradient")[0].style.opacity = "0";
+document.getElementsByClassName("loading")[0].style.opacity = "0";
+
+setTimeout(function(){
+document.getElementsByClassName("gradient")[0].style.display = "none";
+document.getElementsByClassName("loading")[0].style.display = "none";
+},500)
+};
+    </script>
+ <div class="gradient" style="background-image: radial-gradient(#d10000, #680000);
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;transition:0.5s all"></div>
+
+    <div class="loading" style='display: block;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background: url("../assets/images/loader.webp") 50% 50% no-repeat;
+        ;transition:0.5s all'></div>
+
+
+
+
+     
+    <section class="explore-section">
+      <div class="bg_image">
+        <div class="container">
+          <div class="two_btns">
+            <a href="/my-works"><button id="btn1">MY WORKS</button></a>
+            <a href="/about-me"><button id="btn2">ABOUT ME</button></a>
+          </div>
+          <div class="one_btn">
+            <a href="/contact-me"><button id="btn3">CONTACT ME</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
